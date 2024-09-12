@@ -1,0 +1,2 @@
+class DadJoke < ApplicationRecord
+end
