@@ -44,6 +44,8 @@ group :development, :test do
   gem "debug", platforms: %i[ mri windows ]
   gem "factory_bot_rails"
   gem "faker"
+
+  gem 'database_cleaner-active_record'
 end
 
 group :development do

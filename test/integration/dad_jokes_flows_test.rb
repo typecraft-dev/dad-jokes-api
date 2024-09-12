@@ -18,19 +18,20 @@ class DadJokesFlowsTest < ActionDispatch::IntegrationTest
   end
 
   test "user sees dad jokes when they go to index" do
-    DadJoke.destroy_all
-
-    first_joke = DadJoke.create!(
+    first_joke = create(
+      :dad_joke,
       question: "Why did the scarecrow win an award?",
       joke_text: "Because he was outstanding in his field!",
       cringe_level: 75,
     )
-    second_joke = DadJoke.create!(
+    second_joke = create(
+      :dad_joke,
       question: "How does a penguin build its house?",
       joke_text: "Igloos it together!",
       cringe_level: 60,
     )
-    third_joke = DadJoke.create!(
+    third_joke = create(
+      :dad_joke,
       question: "What do you call fake spaghetti?",
       joke_text: "an Impasta!",
       cringe_level: 10,

@@ -12,7 +12,7 @@ module Queries
     private
 
     def sort_by_cringe
-      @query.order(:cringe_level)
+      @query.order(cringe_level: :asc)
     end
 
     def filter_out_empty_jokes
