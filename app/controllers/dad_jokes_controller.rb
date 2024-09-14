@@ -7,9 +7,12 @@ class DadJokesController < ApplicationController
   def create
     @dad_joke = DadJoke.new(dad_joke_params)
     if @dad_joke.save!
-      render json: @dad_joke
+      render json: @dad_joke, status: :created
     else
-      render :error
+      render(
+        json: { error: @dad_joke.errors.full_messages },
+        status: :unprocessable_entity
+      )
     end
   end
 
